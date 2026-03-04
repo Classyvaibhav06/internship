@@ -56,24 +56,29 @@ export default function Contact() {
         {/* Contact Form */}
         <div className="lg:col-span-3 bg-white dark:bg-slate-900 p-10 md:p-14 rounded-3xl shadow-2xl shadow-slate-200/50 dark:shadow-none border border-slate-100 dark:border-slate-800">
           <h2 className="text-4xl font-extrabold mb-10 text-slate-900 dark:text-white font-[family-name:var(--font-outfit)]">Send a Message</h2>
-          <form className="space-y-8">
+          <form action="https://formsubmit.co/vaibhav7290119@gmail.com" method="POST" className="space-y-8">
+            {/* FormSubmit Configuration */}
+            <input type="hidden" name="_subject" value="New Contact Inquiry (Portfolio Website)" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div>
                 <label htmlFor="name" className="block mb-3 text-base font-bold text-slate-700 dark:text-slate-300">Name</label>
-                <input type="text" id="name" className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg" placeholder="John Doe" required />
+                <input type="text" id="name" name="name" className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg" placeholder="John Doe" required />
               </div>
               <div>
                 <label htmlFor="email" className="block mb-3 text-base font-bold text-slate-700 dark:text-slate-300">Email</label>
-                <input type="email" id="email" className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg" placeholder="john@example.com" required />
+                <input type="email" id="email" name="email" className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg" placeholder="john@example.com" required />
               </div>
             </div>
 
             <div>
               <label htmlFor="message" className="block mb-3 text-base font-bold text-slate-700 dark:text-slate-300">Message</label>
-              <textarea id="message" rows={6} className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg resize-none" placeholder="How can I help you?" required></textarea>
+              <textarea id="message" name="message" rows={6} className="w-full p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950 focus:ring-4 focus:ring-amber-500/20 focus:border-amber-500 outline-none transition-all dark:text-white text-lg resize-none" placeholder="How can I help you?" required></textarea>
             </div>
 
-            <button type="button" className="btn-primary w-full py-5 text-xl tracking-wide uppercase shadow-lg shadow-amber-500/30">
+            <button type="submit" className="btn-primary w-full py-5 text-xl tracking-wide uppercase shadow-lg shadow-amber-500/30">
               Send Message
             </button>
           </form>
