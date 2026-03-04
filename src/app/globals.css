@@ -1,26 +1,27 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply antialiased bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 overflow-x-hidden transition-colors duration-300;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.heading-1 {
+  @apply text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6;
+}
+
+.heading-2 {
+  @apply text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4;
+}
+
+.text-accent {
+  @apply text-amber-500 dark:text-amber-400;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-bold rounded-md text-slate-900 bg-amber-500 hover:bg-amber-400 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1;
+}
+
+.btn-outline {
+  @apply inline-flex items-center justify-center px-6 py-3 border-2 border-amber-500 text-base font-bold rounded-md text-amber-600 dark:text-amber-400 hover:bg-amber-500 hover:text-slate-900 transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1;
 }
