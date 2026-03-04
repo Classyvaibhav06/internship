@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Contact",
+  description: "Get in touch with Vaibhav Ghoshi for collaboration, freelance opportunities, or technical inquiries.",
+};
+
 export default function Contact() {
   return (
     <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">

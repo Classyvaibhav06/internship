@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Projects",
+  description: "Explore the featured projects, open-source contributions, and web applications built by Vaibhav Ghoshi.",
+};
+
 export default function Projects() {
   const portfolio = [
      {

@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "About Me",
+  description: "Learn more about Vaibhav Ghoshi, a Full-Stack Developer and DSA enthusiast specializing in modern web technologies.",
+};
+
 export default function About() {
   const achievements = [
     { title: "First Commit", desc: "Pushed first code to production", icon: "🚀" },

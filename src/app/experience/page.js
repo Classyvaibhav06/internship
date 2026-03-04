@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Experience",
+  description: "View the professional experience, timeline, and career achievements of Vaibhav Ghoshi.",
+};
+
 export default function Experience() {
   const experiences = [
     {

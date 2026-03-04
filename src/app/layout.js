@@ -14,8 +14,40 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Vaibhav Ghoshi | Full Stack Developer",
-  description: "Web developer & DSA enthusiast with C++. Curious minded, open for collaboration and freelancing in development.",
+  metadataBase: new URL('https://vaibhav-ghoshi.vercel.app'),
+  title: {
+    default: "Vaibhav Ghoshi | Full Stack Developer & DSA Enthusiast",
+    template: "%s | Vaibhav Ghoshi"
+  },
+  description: "Portfolio of Vaibhav Ghoshi, a passionate Full Stack Web Developer and DSA enthusiast specializing in C++, React, Next.js, and modern JavaScript.",
+  keywords: ["Vaibhav Ghoshi", "Full Stack Developer", "Web Developer", "React Developer", "Next.js", "C++", "DSA", "JavaScript", "Frontend Developer", "Backend Developer", "Portfolio"],
+  authors: [{ name: "Vaibhav Ghoshi", url: "https://vaibhav-ghoshi.vercel.app" }],
+  creator: "Vaibhav Ghoshi",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://vaibhav-ghoshi.vercel.app",
+    title: "Vaibhav Ghoshi | Full Stack Developer",
+    description: "Portfolio of Vaibhav Ghoshi, a passionate Full Stack Web Developer and DSA enthusiast.",
+    siteName: "Vaibhav Ghoshi Portfolio",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vaibhav Ghoshi | Full Stack Developer",
+    description: "Portfolio of Vaibhav Ghoshi, a passionate Full Stack Web Developer and DSA enthusiast.",
+    creator: "@vaibhavghoshi",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
